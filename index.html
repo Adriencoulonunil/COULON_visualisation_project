@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>D3 World Map</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
+<html lang="en">
 
-<body>
-    <script type="module">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="example.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>D3 with DS4E</title>
+</head>
 
-        import define from "./index.js";
-        import { Runtime, Library, Inspector } from "./runtime.js";
+<body onload="main()">
+    <div id="tooltip" class="hidden">
+        <p><strong>Bar Value</strong></p>
+        <p><span id="value">100</span></p>
+    </div>
+    <svg width="600" height="600"></svg>
+</body>
 
-        const runtime = new Runtime();
-        const main = runtime.module(define, Inspector.into(document.body));
-
-    </script>
+</html>
